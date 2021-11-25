@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    background-image: url("/assets/background.jpg");
+    background-repeat: no-repeat;
+    color: white;
+}
+
+div.conteneur{
+    height: 100%;
+  
+    background-size:cover;
+
+}
+
+
+
+div.header div.text-grand{
+    box-sizing: border-box;
+    padding: 20px 0px;
+}
+
+div.header div.text-grand p.grand-text{
+    font-size: 70px;
+    text-align: center;
+}
+
+div.header div.text-grand p.grand-text span.bleu{
+    color: rgb(0, 0, 100);
+}
+div.header div.text-grand p.grand-text span.rouge{
+    color: #640000;
+}
+div.header div.text-grand p.grand-text span.noir{
+    color: rgb(0, 0, 0);
+}
+div.header div.text-grand p.grand-text span.bleu,
+div.header div.text-grand p.grand-text span.rouge,
+div.header div.text-grand p.grand-text span.noir{
+    text-shadow: 2px 1px 1px white,
+                 3px 2px 1px white,
+                 4px 3px 1px white;
+}
+div.header div.text-grand p.slogan{
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    background-color: rgb(100, 0, 0);
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+/**===================== Debut Style compteur ===================**/
+
+ #compte_a_rebours {
+    font-family: Arial;
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    background-color: rgba(100, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    width: 660px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: content-box;
+    border-radius: 50px;
+  }
+
+  .prefixe p{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .block, .nb {
+    display: inline-block;
+  }
+
+  .block {
+    width: 154px;
+
+  }
+
+
+  .nb {
+    font-size: 5em;
+    font-weight: bold;
+  }
+
+  /**===================== Fin Style compteur ===================**/
+
+div.social-media{
+    padding: 20px 0px;
+    
+}
+
+div.content > p{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+   
+}
+
+div.social-media p,
+div.contact p{
+    font-size: 30px;
+    text-align: center;
+    
+}
+div.social-media p{
+    background-color: black;
+    
+}
+
+div.social-media div.icon-media,
+div.contact div.icon-contact{
+    padding: 10px 0;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+div.social-media div.icon-media a,
+div.contact div.icon-contact a{
+   color: #0096c8;
+   margin-left: 30px;
+   transition-property: color;
+   transition-duration: 1s;
+   transition-delay: 0s
+   
+}
+div.social-media div.icon-media a:hover,
+div.contact div.icon-contact a:hover{
+    color: rgb(100, 0, 0);
+}
+div.contact div.icon-contact a:last-child{
+    margin-left: 50px;
+}
+div.footer {
+    margin-bottom: 20px;
+}
+div.footer p{
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+}
+
+div.footer p a{
+    text-decoration: none;
+    color: rgb(231, 140, 140);
+    
+}
+
+
+/**=======Media Queries================**/
+@media only screen and (max-width: 700px) { 
+
+    div.header div.text-grand p.grand-text{
+        font-size: 33px;
+        text-align: center;
+    }
+    div.header div.text-grand p.grand-text span.bleu,
+    div.header div.text-grand p.grand-text span.rouge,
+    div.header div.text-grand p.grand-text span.noir{
+    background-color: white;
+    text-shadow: none;
+    }
+    div.header div.text-grand p.slogan{
+        font-size: 13px;
+        width: 280px;
+        
+    }
+    div.content > p{
+        font-size: 15px;
+       
+    }
+    /**===================== Debut Style compteur ===================**/
+
+ #compte_a_rebours {
+    width: 300px;
+  }
+
+  .prefixe p{
+    font-size: 15px;
+  }
+
+  .block, .nb {
+    display: inline-block;
+  }
+
+  .block {
+    width: 154px;
+
+  }
+
+
+  .nb {
+    font-size: 3em;
+  }
+
+  /**===================== Fin Style compteur ===================**/
+    div.social-media p,
+    div.contact p{
+    font-size: 15px;
+    
+    }
+   div.social-media div.icon-media,
+    div.contact div.icon-contact{
+    width: 200px;
+   
+    }
+    div.social-media div.icon-media a,
+    div.contact div.icon-contact a{
+
+     font-size: 10px;
+   
+   }
+
+   div.contact div.icon-contact a:last-child{
+     margin-left: 30px;
+    }
+   div.footer p{
+     font-size: 10px;
+
+    }
+
+
+}
+

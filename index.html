@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petit Coeur Technologie</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+     <!-- Messenger Plugin de discussion Code -->
+     <div id="fb-root"></div>
+
+     <!-- Your Plugin de discussion code -->
+     <div id="fb-customer-chat" class="fb-customerchat">
+     </div>
+ 
+     <script>
+       var chatbox = document.getElementById('fb-customer-chat');
+       chatbox.setAttribute("page_id", "163045285436245");
+       chatbox.setAttribute("attribution", "biz_inbox");
+ 
+       window.fbAsyncInit = function() {
+         FB.init({
+           xfbml            : true,
+           version          : 'v12.0'
+         });
+       };
+ 
+       (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+     </script>
+     <!-- Fin du plugin Facebook-->
+    <!--============== Conteneur Principal pour gerer l'affichage================-->
+    <div class="conteneur">
+    <!---===============L'entête avec le logo et le texte d'accueil====================-->
+        <div class="header">
+            <div class="text-grand">
+                <p class="grand-text"><b><span class="bleu">P</span></b>etit <b><span class="rouge">C</span></b>oeur <b><span class="noir">T</span></b>echnologie</p>
+                <p class="slogan">Un guide et compagnon pour votre entreprise</p>
+            </div> 
+            <div class="boule"></div><!--=====La boule animée sur la bordure inférieure du header========-->
+        </div>  
+    
+    <!--==================Creation du conteur et des liens vers les réseaux sociaux==========-->
+        <div class="content">
+
+              <p>Ce site est actuellement en construction.</p>
+
+              <!--========= Intégration du compteur ===========-->
+              <div id="compte_a_rebours"><noscript>Le lancement officiel du site est prévu courant janvier.</noscript></div>
+              <!--========= Fin de l'intégration du compteur ===========-->
+
+              <!--============ Ajout des Réseaux Sociaux ============-->
+              
+              <div class="social-media">
+                  <p>Suivez nous sur nos réseaux sociaux :</p>
+
+                  <div class="icon-media">
+                        <a href="https://facebook.com/WandodiaWARADIA" target="_blank"><i class="fab fa-facebook-square fa-6x"></i></a>
+                        <a href="https://www.linkedin.com/company/petit-coeur-technologie" target="_blank"><i class="fab fa-linkedin fa-6x"></i></a>
+                  </div>
+                 
+              </div>
+
+              <div class="contact">
+                  <p>Ou nous contactez via :</p>
+
+                  <div class="icon-contact">
+                         <a href="https://api.whatsapp.com/send?phone=2243622135353" target="_blank"><i class="fab fa-whatsapp-square fa-6x"></i></a>
+                         <a href="mailto:info@petitcoeurtechnologie.com" target="_blank"><i class="far fa-envelope fa-6x"></i></a>
+                  </div>
+                  
+              </div>
+
+        </div>
+
+    <!--=========================Le footer du site=========================================-->
+        <div class="footer">
+
+            <p><a href="#">Mon hébergeur Web</a> compense intégralement ses émissions de CO2</p>
+    
+        </div>
+
+    </div>
+
+   
+
+    <!--========== Script du compteur =================-->
+    
+    <script>
+        function compte_a_rebours() {
+          var compte_a_rebours = document.getElementById("compte_a_rebours");
+          var date_actuelle = new Date();
+          var date_evenement = new Date("Jan 1 2022 09:00:00");
+          var total_secondes = (date_evenement - date_actuelle) / 1000;
+          var prefixe = '<div class="prefixe"><p>Revenez dans :</p></div>';
+          if (total_secondes < 0) {
+            prefixe = "<p>Compte à rebours terminé il y a <p> ";
+            total_secondes = Math.abs(total_secondes);
+          }
+      
+          if (total_secondes > 0) {
+            var jours = Math.floor(total_secondes / (60 * 60 * 24));
+            var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
+            minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
+            secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
+      
+            if (secondes < 10) {
+              secondes = '0' + secondes;
+            }
+      
+            if (minutes < 10) {
+              minutes = '0' + minutes;
+            }
+      
+            if (heures < 10) {
+              heures = '0' + heures;
+            }
+      
+            var mot_jour = "jours";
+            var mot_heure = "heures";
+            var mot_minute = "minutes";
+            var mot_seconde = "secondes";
+      
+            if (secondes < 2) {
+              mot_seconde = "seconde";
+            }
+      
+            compte_a_rebours.innerHTML = prefixe + '<br /><div class="block">' 
+              + '<div class="nb"><p>' + jours + '</p></div><br /><p>' + mot_jour + '</p></div>'+ ":" + '<div class="block">' 
+              + '<div class="nb">' + heures + '</div><br />' + mot_heure + '</div>' + ":" + '<div class="block">'
+              + '<div class="nb">' + minutes + '</div><br />' + mot_minute + '</div>' + ":" + '<div class="block"> '
+              + '<div class="nb">' + secondes + '</div><br />' + mot_seconde + '</div>';
+          } else {
+            compte_a_rebours.innerHTML = 'Compte à rebours terminé.';
+          }
+      
+          var actualisation = setTimeout("compte_a_rebours();", 1000);
+        }
+        compte_a_rebours();
+      </script>
+  
+</body>
+</html>
